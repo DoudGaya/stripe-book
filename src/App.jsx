@@ -25,7 +25,7 @@ const CheckoutForm = () => {
       setSuccess(false);
     } else {
       setError(null);
-      const paymentIntent = await stripe.confirmCardPayment(paymentMethod.id, {
+      const paymentIntent = await stripe.confirmCardPayment( paymentMethod.id, {
         amount: 2000, // 2000 represents $20 in cents
         currency: 'usd',
       });
